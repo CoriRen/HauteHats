@@ -190,7 +190,13 @@ header{
   from {transform: rotateY(0deg);}
   to {transform: rotateY(360deg);}
 }
-
+#menuIcon{
+  display: none;
+}
+/* MobileHero*/
+.mobileHero{
+  display: none;
+}
 /* Product Grid*/
 .productGrid{
   display: grid;
@@ -206,16 +212,22 @@ header{
   opacity: 0;
   transform: translate(0, 15vh);
   transition: all 2s;
+  border: 1px solid #f6f6f6;
+  padding: 0 0 4% 0;
+  margin-bottom: 6%;
+  box-shadow: 5px 5px 15px #f6f6f6;
 
 }
 .productColumn.visible{
   opacity: 1;
   transform: translate(0, 0);
+
 }
 
 
-.productColumn:hover{
+.productColumn.visible:hover{
   /* box-shadow: 0 0 15px lightgray; */
+  box-shadow: 5px 5px 15px #dbdbdd;
  
 }
 .product{
@@ -225,7 +237,6 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
- 
 }
 
 /* Two Column Grid*/
@@ -305,7 +316,7 @@ Modules
   justify-content: flex-start;
   align-items: center;
 }
-.textColumn{
+.textColumn, .productTextColumn{
  height: fit-content;
  text-align: center;
  padding: 5% 0 0 0 ;
@@ -316,7 +327,7 @@ Modules
 /*****************************************************************
 Backgrounds
 ******************************************************************/
-#homePageHero{
+.homePageHero{
   background: url(assets/LANA-LIGHT-BLUE-BUTTON-HAT-LIFESTYLE-SHOT_e1342c47-dfcc-452f-9ddd-f19e9cf8c121_5000x.jpg) no-repeat;
   background-size: cover ;
   background-position: top;
@@ -379,6 +390,46 @@ Backgrounds
 Media queries
 ************************************************************/
 
-@media screen (max-width: 800px){
-  
+@media screen and (max-width: 800px){
+  /*header*/
+  .headerSocials,.headerLinks{
+    display:none;
+  }
+  #menuIcon{
+    display: inline;
+    font-size: 1.5rem;
+  }
+    /*hero and about us*/
+  .twoColGrid{
+    display: block;
+  }
+  .hero{
+    display: none;
+  }
+  .mobileHero{
+    display: flex;
+    height: 100vh;
+    position: relative;
+    top:0;
+  }
+  .textColumn{
+    height: 80vh;
+    justify-content: center;
+    align-content: flex-end;
+    padding: 5% 0 0 0 ;
+    color: white;
+  }
+  /*product columns*/
+  .productGrid{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 20px 0;
+  }
+  .product{
+    min-height: 60vh;
+    background:#e1dbdb;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
 }
