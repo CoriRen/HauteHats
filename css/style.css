@@ -82,6 +82,7 @@ p{
 }
 
 
+
 /* Text */
 .center{
   text-align: center;
@@ -122,6 +123,7 @@ a:hover{
   background-color: #a493e4;
   border: 1px solid #a493e4;
 }
+
 /* Logos and Icons*/
 .logo {
   font-size: 20px;
@@ -133,6 +135,13 @@ a:hover{
   background-color: #9F78FF;
 }
 
+/*lists*/
+.featuresList{
+  padding-left: 5%;
+}
+.features{
+  list-style-type: circle;
+}
 
 
 /*****************************************************************
@@ -144,10 +153,14 @@ Layout
   width: 90%;
   margin: 0 auto;
 }
+.productPage{
+  width: 70%;
+  padding-top: 2%;
+}
 section {
  margin: 0 0 8% 0;
 }
-/* Header*/
+/* Global Header*/
 header{
   background-color: white;
   top: 0;
@@ -193,6 +206,7 @@ header{
 #menuIcon{
   display: none;
 }
+
 /* MobileHero*/
 .mobileHero{
   display: none;
@@ -302,6 +316,21 @@ footer{
  gap: 10px;
 
 }
+
+/*Image Grid*/
+.imageGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 25% .25%;
+  gap: 1%;
+
+}
+.productDescription{
+ grid-area: 1 / 3 / 2 / 3;
+}
+.smallProduct{
+  height: 400px;
+}
 /*****************************************************************
 Modules
 ******************************************************************/
@@ -327,6 +356,7 @@ Modules
 /*****************************************************************
 Backgrounds
 ******************************************************************/
+
 .homePageHero{
   background: url(assets/LANA-LIGHT-BLUE-BUTTON-HAT-LIFESTYLE-SHOT_e1342c47-dfcc-452f-9ddd-f19e9cf8c121_5000x.jpg) no-repeat;
   background-size: cover ;
