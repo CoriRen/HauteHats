@@ -321,16 +321,14 @@ footer{
 .productImageGrid{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 25% .25%;
+  grid-template-rows: 1fr 1fr;
   gap: 1%;
 
 }
 .productDescription{
  grid-area: 1 / 3 / 2 / 3;
 }
-.smallProduct{
-  height: 400px;
-}
+
 /*****************************************************************
 Modules
 ******************************************************************/
